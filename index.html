@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="/icon.png" />
+<title>For Nang Phwe Hom</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- 🌌 OPENING -->
+<section id="opening" class="section fade">
+    <h1 class="typewriter">
+    For Ivy ❀ my happiness in human form
+    </h1>
+    <button class="enter-btn magic-btn" onclick="goToPassword()">Enter</button>
+</section>
+
+<!-- 🔐 PASSWORD -->
+<section id="passwordScreen" class="section hidden fade">
+    <h2 class="secret-text">
+    Enter the secret .✦ ݁˖
+    </h2>
+    
+    <input type="password" id="passwordInput" class="input-box">
+    
+    <button class="unlock-btn magic-btn" onclick="checkPassword()">Unlock</button>
+    
+    <div class="message" id="message"></div>
+</section>
+
+<!-- ⏳ UNLOCKING -->
+<section id="loadingScreen" class="section hidden fade">
+    <h2>Unlocking…✿</h2>
+    <div class="loader"></div>
+</section>
+
+<!-- 🎂 BIRTHDAY -->
+<section id="birthday" class="section hidden fade">
+    <div class="card">
+        <img src="photo.jpg" id="photo" onclick="handleTap()">
+
+        <h2>Happy Birthday Noung ♡</h2>
+        <p>
+        <h5>Ko a myar gyi chit ya tae Khalay layy</h5>
+        <h5>Koe yae chit sayar khalay layy</h5><br>
+        happy birthday par Khalay layy yay! bar lo lo nae a thet 20 taung shi twar pyi naw.. mway nay hmar pyaw shwin par say.. <br><br>
+        athet 20 ka sa pyi naung hnit paung myar swr pyaw shwin phwal nay yat tway paing hsine ya par say.. sate yaw ko yaw kyann kyann mar mar pyaw pyaw shwin shwin nae bawa ko pyae pyae sone sone phyat tann kyaw phyat naing par say.. sate kuu tha mya phyit chin tha mya eain mat tway lae a myan sone phyit lar par say naw...<br><br>
+        lat shi chit thu ko lae di htet m ka a myar gyi po chit naing par say.. lat shi chit thu nae pel pyaw shwin ya par say.. lat shi chit thu nae pel paung phat ya par say.. lat shi chit thu nae a myan sone nee sat par say.. lat shi chit thu nae kha yee tway a myar gyi thwar naing par say.. Khalay layy mway nay hmar Khalay layy nar a tu ma shi pay naing loh sate ma kaung phyit mi tal ☹ naung lar mae mway nay tway hmar a tu shi nay chin tal, a tu shi ya par say...<br><br>
+        <h4>Happy Birthday, my everything ｡˚○</h4>
+        </p>
+    </div>
+    
+<!-- 💌 STORY SECTION -->
+<section id="story" class="section">
+    <div class="story-block hidden-scroll">
+        <h2>14 May...</h2>
+        <p>The day you were born ♉︎</p>
+    </div>
+
+    <div class="story-block hidden-scroll">
+        <p>And the day our story became real again ‹𝟹</p>
+    </div>
+
+    <div class="story-block hidden-scroll">
+        <p>Happy Birthday & Happy 1 Year Anniversary</p>
+    </div>
+</section>
+
+<!-- ⏳ ANNIVERSARY COUNTER -->
+<section class="section">
+    <div class="card">
+        <h2>Our Journey ⴵ</h2>
+        <p id="counter"></p>
+    </div>
+</section>
+
+<!-- 💖 LOVE LETTER -->
+<section class="section">
+    <div class="card love-letter">
+        <h2>To the girl who I found twice</h2>
+        <p>
+        <h5>Nang Phwe Hom</h5><br>
+
+        I don't think words will ever be enough to explain how much I truly love you.  
+        Noung ka Koe Kaung ma layy so tar htet po par tal.. bawa hmar bar tway bel phyit phyit Noung ko Koe a nar hmar bel a myae shi nay say chin tal.. Koe si ko pyan yauk lar khe pay loh Noung ko kyay zuu a myar gyi tin par tal naw.. a myar gyi chit tal noung ko...<br><br>
+
+        a hku chain hti lel Koe nar shi nay pay loh kyay zuu tin par tal.. Ko khat khe nay tae a chain tway hmar Koe ko nar lal khe pay loh yaw, a soe sone nay tway hmar lel thee khan pyi Koe a nar hmar bel shi nay pay loh yaw, Ko Noung ko lo att nay tae a chain tway hmar Koe a twat shi nay pay loh yaw, Ko nae htike tan tal loh bel tone ka mha ma tway khe mi tae chit chin myit tar ko khan sar mi say aung chit pay tae a twat yaw a myar gyi kyay zuu tin par tal<br><br>
+
+        You don't know how much your presence changes my life. Even the smallest things about you make me happy. And honestly, I still can't believe that the girl I used to know as a childhood friend became the person I love the most now.<br><br> 
+        I’m grateful for every memory we made together, every late-night conversation, every laugh, every little argument that made us stronger, and every moment you chose to stay.<br><br>
+        I know relationships are not always perfect, but one thing I promise is that my love for you is real. I will continue trying my best to make you happy, protect your heart, and stay beside you through every chapter of life.<br><br>
+        Thank you for loving me. Thank you for coming back into my life. Thank you for being you.<br><br>
+        And on this special day — your birthday and our anniversary — I just want you to know this: No matter what happens, I’ll always be here, loving you more each day... 
+        </p>
+    </div>
+</section>
+
+    <!-- 🎬 EASTER EGG INTRO -->
+<section id="easterIntro" class="section hidden fade dark">
+    <h2>You unlocked something special… ✨</h2>
+</section>
+
+<!-- 🌌 EASTER EGG PAGE -->
+<section id="easterPage" class="section hidden dark">
+
+    <h2 class="glow">
+        Our Memory Universe 🌌
+    </h2>
+
+    <div id="stars"></div>
+
+</section>
+
+<!-- ❤️ HEART CONTAINER -->
+<div id="hearts"></div>
+
+    <!-- ❤️ HEART CONTAINER -->
+    <div id="hearts"></div>
+
+<!-- 🔊 MUSIC -->
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn magic-btn" onclick="toggleMusic()">☁</button>
+
+<script src="script.js"></script>
+</body>
+</html>
+
