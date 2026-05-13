@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(to top, #a8edea, #fed6e3);
+    overflow-x: hidden;
+}
+
+/* 🌸 GENERAL */
+.section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* 🌌 FADE ANIMATION */
+.fade {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 🌌 OPENING */
+#opening h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.enter-btn {
+    font-family: 'Nunito', sans-serif;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    background: #ff8fab;
+    color: white;
+    cursor: pointer;
+}
+
+/* 🔐 PASSWORD */
+.input-box {
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    border-bottom:2px solid rgba(255,255,255,0.4);
+    outline: none;
+    color:#ff8fab;
+    width: 220px;
+    text-align: center;
+    margin-top: 15px;
+    background: transparent;
+}
+
+/* ❌ SHAKE */
+.shake {
+    animation: shake 0.4s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.unlock-btn {
+    font-family: 'Nunito', sans-serif;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #ff8fab;
+    color: white;
+}
+
+.message {
+    margin-top: 10px;
+}
+
+/* ⏳ LOADER */
+.loader {
+    margin-top: 15px;
+    border: 5px solid #fff;
+    border-top: 5px solid #ff8fab;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 🎂 CARD */
+.card {
+    max-width: 500px;
+    width: 100%;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.card img {
+    width: 60%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* ❤️ HEARTS */
+#hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: floatUp 2s linear forwards;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+/* 🔊 MUSIC */
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ff8fab;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 600px) {
+    #opening h1 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+/* 🌙 DARK MODE (EASTER) */
+.dark {
+    background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* 🌌 GLOW TEXT */
+.glow {
+    font-size: 2rem;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff8fab;
+}
+
+/* 🌠 STARS */
+#stars {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.star {
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+/* 💌 STORY */
+.story-block {
+    max-width: 600px;
+    margin: 40px 0;
+    font-size: 1.2rem;
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+/* hidden state */
+.hidden-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+/* visible */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 💖 LOVE LETTER STYLE */
+.love-letter {
+    background: #fffaf0;
+    transform: rotate(-1deg);
+}
+
+/* ⏳ COUNTER */
+#counter {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* 🌸 TYPEWRITER TEXT */
+
+.typewriter{
+
+    width:0;
+
+    overflow:hidden;
+    white-space:nowrap;
+
+    font-size:3rem;
+    color:white;
+
+    border-right:3px solid white;
+
+    opacity:0;
+
+    animation:
+    fadeIn 1s ease forwards,
+    typing 4s steps(31,end) forwards 1s,
+    blink 0.8s infinite;
+
+    animation-fill-mode:forwards;
+}
+
+.typewriter.finished{
+    border-right:none;
+}
+
+/* ✨ TYPING EFFECT */
+@keyframes typing{
+
+    from{
+        width:0;
+    }
+
+    to{
+        width: 31ch;
+    }
+
+}
+
+/* ✨ CURSOR BLINK */
+@keyframes blink{
+
+    50%{
+        border-color:transparent;
+    }
+
+}
+
+#opening{
+    overflow:hidden;
+    padding:20px;
+}
+
+.typewriter{
+    max-width:100%;
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px){
+
+    .typewriter{
+
+        font-size:1.8rem;
+
+        white-space:normal;
+
+        width:100%;
+
+        border-right:none;
+
+        text-align:center;
+
+        animation:
+        fadeIn 2s ease forwards;
+
+    }
+
+}
+
+/* 🌸 ALL BUTTON HOVER EFFECT */
+.magic-btn{
+    overflow:hidden;
+    transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+
+}
+
+/* ✨ HOVER */
+.magic-btn:hover{
+
+    transform: translateY(-5px) scale(1.05);
+
+    box-shadow: 0 8px 25px rgba(255,182,193,0.5);
+
+}
+
+/* 🌟 CLICK */
+.magic-btn:active{
+
+    transform:scale(0.95);
+
+}
+
+/* ✨ SHINE */
+.magic-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:60%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+}
+
+/* 🌟 SHINE ANIMATION */
+.magic-btn:hover::before{
+
+    animation:shine 1s forwards;
+
+}
+
+@keyframes shine{
+
+    100%{
+        left:130%;
+    }
+
+}
+
+.secret-text{
+
+    background:
+    linear-gradient(
+        90deg,
+        #fff,
+        #ffd6e7,
+        #fff
+    );
+
+    background-size:200%;
+
+    background-clip:text;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:
+    shimmer 15s linear infinite,
+    floatText 14s ease-in-out infinite;
+
+}
+
+@keyframes shimmer{
+
+    from{
+        background-position:200%;
+    }
+
+    to{
+        background-position:-200%;
+    }
+
+}
+
